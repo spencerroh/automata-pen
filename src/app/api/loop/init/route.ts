@@ -4,7 +4,7 @@ import { callModel, parseJsonWithRetry } from "@/lib/openai";
 import { getPhaseForRound, maxRewriteOrdersByRound } from "@/lib/loop";
 import { loopInitRequestSchema, loopStateSchema } from "@/lib/schemas";
 
-const roundOneSchema = loopStateSchema.shape.pick({
+const roundOneSchema = loopStateSchema.pick({
   logline: true,
   outline: true,
   draft: true,
